@@ -51,7 +51,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvName2;
-        TextView description;
+        EditText description;
         ImageView ivImageP1;
         TextView ic_more;
         public ViewHolder(@NonNull View itemView) {
