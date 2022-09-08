@@ -2,6 +2,7 @@ package com.example.instagramclone;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.RoundedCorner;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.parse.ParseFile;
 
 import java.util.List;
@@ -48,14 +50,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView ivImageP;
         TextView tvName2;
-        EditText description;
+        TextView description;
         ImageView ivImageP1;
         TextView ic_more;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivImageP=itemView.findViewById(R.id.ivImageP);
             tvName2=itemView.findViewById(R.id.tvName2);
             description=itemView.findViewById(R.id.description);
             ivImageP1=itemView.findViewById(R.id.ivImageP1);
@@ -66,10 +66,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvName2.setText(post.getUser().getUsername());
             description.setText(post.getDescription());
             ParseFile image=post.getImage();
-            if(image!=null) {
-                Glide.with(context).
-                        load(post.getImage().getUrl()).into(ivImageP);
-            }
+
 
             if(image!=null) {
                 Glide.with(context).

@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -50,6 +51,7 @@ public class HomeFragment extends Fragment {
         adapter = new PostAdapter(getContext(),postList);
         rvRecycle.setAdapter(adapter);
         rvRecycle.setLayoutManager(new LinearLayoutManager(context));
+
 
 
         queryPosts();
