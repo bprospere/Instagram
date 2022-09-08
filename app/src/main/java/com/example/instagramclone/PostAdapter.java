@@ -66,19 +66,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvName2.setText(post.getUser().getUsername());
             description.setText(post.getDescription());
             ParseFile image=post.getImage();
-            if(image!=null){
-                Glide.with(context)
-                        .load(image)
-                        .fitCenter()
-                        .into(ivImageP1);
-
+            if(image!=null) {
+                Glide.with(context).
+                        load(post.getImage().getUrl()).into(ivImageP);
             }
-            if(image!=null){
-                Glide.with(context)
-                        .load(image)
-                        .fitCenter()
-                        .into(ivImageP);
 
+            if(image!=null) {
+                Glide.with(context).
+                        load(post.getImage().getUrl()).into(ivImageP1);
             }
 
 
