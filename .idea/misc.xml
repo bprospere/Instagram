@@ -3,28 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1915" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/heartcolor.xml" value="0.1" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_acount.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_acount_outline.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_baseline_more.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_bookmark.xml" value="0.1" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_camera.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_chat.xml" value="0.1915" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_heart.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_heart.xml" value="0.12" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_home.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_home_outline.xml" value="0.1915" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_logo_instagram_background.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_plus_box.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_plus_box_outline.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/drawable/ic_send.xml" value="0.1915" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_login.xml" value="0.16259057971014493" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_main.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_comment.xml" value="0.15534420289855072" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_create_post.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_detail.xml" value="0.13356697819314642" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_post_detail.xml" value="0.1" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/activity_signup.xml" value="0.16304347826086957" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/fragment_home.xml" value="0.16304347826086957" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/fragment_more.xml" value="0.161231884057971" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/fragment_profile.xml" value="0.161231884057971" />
-        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/item_post.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/content_home.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/fragment_more.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/fragment_profile.xml" value="0.15" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/image_grid.xml" value="0.18375" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/item_comment.xml" value="0.15534420289855072" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/item_post.xml" value="0.1" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/item_post_post.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/item_post_profile.xml" value="0.1" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/tool_bar.xml" value="0.161231884057971" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/tool_bar1.xml" value="0.161231884057971" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/toolbar_detail.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/layout/toolbar_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/mipmap-anydpi-v26/ic_logo_instagram.xml" value="0.1915" />
         <entry key="..\:/Users/bprospere/AndroidStudioProjects/InstagramClone2/app/src/main/res/xml/fileprovider.xml" value="0.16304347826086957" />

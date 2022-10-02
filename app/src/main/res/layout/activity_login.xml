@@ -1,69 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:ems="10"
-        android:layout_weight="1"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/veganstyle"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/instagram"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="32sp"
         android:textColor="@color/black"
-        android:textSize="24sp" />
-
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/veganstyle"
+        android:orientation="vertical"
+        android:text="@string/instagram" />
 
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:autofillHints="Username"
         android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:hint="@string/username"
+        android:inputType="text"
+        android:padding="10dp"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etUsername"
-        android:layout_marginTop="0dp"
-        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="Password"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="#007FFF"
-        android:text="@string/log_in"
-        android:textSize="12sp"
-        android:layout_weight="1"
-        tools:ignore="TextContrastCheck" />
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:text="@string/log_in" />
 
     <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="match_parent"
+        android:id="@+id/btnSignUP"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#32CD32"
-        android:text="@string/sign_up"
-        android:layout_marginTop="0dp"
-        android:layout_weight="1"
-        android:textSize="12sp" />
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/vert"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:text="@string/sign_up" />
 
 
 </LinearLayout>

@@ -16,4 +16,13 @@
     <string name="submit">Submit</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_10">10</string>
+    <string name="following">Following</string>
+    <string name="bprospere">bprospere</string>
+    <string name="logout">Logout</string>
+    <string name="submitprofile">SubmitProfile</string>
+    <string name="save">Save</string>
+    <string name="comment">comment</string>
+    <string name="add_a_comment">add_a_comment</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

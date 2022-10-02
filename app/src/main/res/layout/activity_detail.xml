@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <include
+        android:id="@+id/toolbar_detail"
+        layout="@layout/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivProfileImageDetail"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/toolbar_detail"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="profile_image"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvUsernameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_detail"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/ivProfileImageDetail"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap"
+        tools:text="john@2000" />
+
+    <ImageView
+        android:id="@+id/ivPostDetail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/ivProfileImageDetail"
+        android:layout_margin="5dp"
+        android:contentDescription="image_posted"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSettingsDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/toolbar_detail"
+        android:layout_marginTop="-5dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="settings"
+        android:src="@drawable/ic_baseline_more" />
+
+    <ImageButton
+        android:id="@+id/imgBtnHeartDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="settings"
+        android:src="@drawable/ic_heart" />
+
+    <ImageButton
+        android:id="@+id/imgBtnCommentDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/imgBtnHeartDetail"
+        android:backgroundTint="@color/white"
+        android:contentDescription="settings"
+        android:src="@drawable/ic_chat" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSendDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/imgBtnCommentDetail"
+        android:backgroundTint="@color/white"
+        android:contentDescription="settings"
+        android:src="@drawable/ic_send" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSaveDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="settings"
+        android:src="@drawable/ic_bookmark" />
+
+
+    <TextView
+        android:id="@+id/tvDescriptionDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgBtnCommentDetail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        tools:text="My headshot" />
+
+    <TextView
+        android:id="@+id/tvLikeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDescriptionDetail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        tools:text="2 likes" />
+
+    <TextView
+        android:id="@+id/tvDateDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tvLikeDetail"
+        tools:ignore="RelativeOverlap"
+        tools:text="10/23/1" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvDateDetail"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/listDivider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider2"
+        android:layout_marginTop="5dp" />
+
+
+</RelativeLayout>

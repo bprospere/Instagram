@@ -1,43 +1,24 @@
 package com.example.instagramclone;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseQuery;
-import com.parse.ParseUser;
-import com.parse.SaveCallback;
-
-import java.io.File;
-import java.util.List;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG="MainActivity";
-    BottomNavigationView bottomNavigation;
+
+    public static final String TAG = "MainActivity";
+    public static final String POST = "post";
+    public static BottomNavigationView bottom_navigation;
+    final FragmentManager fragmentManager = getSupportFragmentManager();
+    final Fragment HomeFragment = new HomeFragment();
+    final Fragment MoreFragment = new MoreFragment();
+    final Fragment ProfiliFragment = new ProfileFragment();
 
 
     @Override
@@ -45,45 +26,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        bottom_navigation = findViewById(R.id.bottom_navigation);
 
-        final FragmentManager fragmentManager = getSupportFragmentManager();
-
-        // define your fragments here
-        final Fragment fragmentHome = new HomeFragment();
-        final Fragment fragmentCompose = new MoreFragment();
-        final Fragment fragmentAccount= new ProfileFragment();
-
-
-        bottomNavigation = findViewById(R.id.bottomNavigation);
-        bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        bottom_navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment;
-                switch (item.getItemId()) {
+                Fragment fragment = new Fragment();
+                switch (item.getItemId()){
                     case R.id.it_home:
-                        fragment = fragmentHome;
+                        fragment = HomeFragment;
                         break;
 
                     case R.id.it_plus:
-                        fragment = fragmentCompose;
+                        fragment = MoreFragment;
                         break;
 
                     case R.id.it_account:
                     default:
-                        fragment = fragmentAccount;
+                        fragment = ProfiliFragment;
                         break;
-
                 }
-                fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.fragmentPlaceholder, fragment).commit();
                 return true;
             }
         });
-
-        bottomNavigation.setSelectedItemId(R.id.it_home);
-
-
-
-
-
+        bottom_navigation.setSelectedItemId(R.id.it_home);
     }
 }
