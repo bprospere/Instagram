@@ -13,119 +13,112 @@
         android:layout_height="wrap_content" />
 
     <ImageView
-        android:id="@+id/ivProfileImageDetail"
+        android:id="@+id/ivProfileImage1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/toolbar_detail"
         android:layout_alignParentStart="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:contentDescription="profile_image"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvUsernameDetail"
+        android:id="@+id/tvUserName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar_detail"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/ivProfileImageDetail"
+        android:layout_toEndOf="@+id/ivProfileImage1"
         android:textStyle="bold"
         tools:ignore="RelativeOverlap"
-        tools:text="john@2000" />
+        tools:text="@string/bprospere" />
 
     <ImageView
-        android:id="@+id/ivPostDetail"
+        android:id="@+id/ivPost1"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_below="@+id/ivProfileImageDetail"
+        android:layout_below="@+id/ivProfileImage1"
         android:layout_margin="5dp"
-        android:contentDescription="image_posted"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageButton
-        android:id="@+id/imgBtnSettingsDetail"
+        android:id="@+id/ic_more1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/toolbar_detail"
         android:layout_marginTop="-5dp"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_baseline_more" />
 
     <ImageButton
-        android:id="@+id/imgBtnHeartDetail"
+        android:id="@+id/ic_heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPostDetail"
+        android:layout_below="@+id/ivPost1"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_heart" />
 
     <ImageButton
-        android:id="@+id/imgBtnCommentDetail"
+        android:id="@+id/ic_chat1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPostDetail"
+        android:layout_below="@+id/ivPost1"
         android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/imgBtnHeartDetail"
+        android:layout_toEndOf="@+id/ic_heart"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_chat" />
 
     <ImageButton
-        android:id="@+id/imgBtnSendDetail"
+        android:id="@+id/ic_send1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPostDetail"
+        android:layout_below="@+id/ivPost1"
         android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/imgBtnCommentDetail"
+        android:layout_toEndOf="@+id/ic_chat1"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_send" />
 
     <ImageButton
-        android:id="@+id/imgBtnSaveDetail"
+        android:id="@+id/ic_bookmark1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPostDetail"
+        android:layout_below="@+id/ivPost1"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_bookmark" />
 
 
     <TextView
-        android:id="@+id/tvDescriptionDetail"
+        android:id="@+id/tvDescription1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgBtnCommentDetail"
+        android:layout_below="@+id/ic_heart"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         tools:text="My headshot" />
 
     <TextView
-        android:id="@+id/tvLikeDetail"
+        android:id="@+id/tvLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDescriptionDetail"
+        android:layout_below="@+id/tvDescription1"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         tools:text="2 likes" />
 
     <TextView
-        android:id="@+id/tvDateDetail"
+        android:id="@+id/tvDate1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/tvLikeDetail"
+        android:layout_below="@+id/tvLike"
         tools:ignore="RelativeOverlap"
         tools:text="10/23/1" />
 
@@ -133,7 +126,7 @@
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/tvDateDetail"
+        android:layout_below="@+id/tvDate1"
         android:layout_marginTop="5dp"
         android:background="?android:attr/listDivider" />
 

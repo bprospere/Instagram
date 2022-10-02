@@ -45,7 +45,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:contentDescription="image_posted"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageButton
@@ -90,7 +89,6 @@
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ic_chat"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_send"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
@@ -103,7 +101,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/white"
-        android:contentDescription="settings"
         android:src="@drawable/ic_bookmark"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
@@ -114,8 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ic_chat"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        tools:text="My headshot" />
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:id="@+id/tvLike"
@@ -124,7 +120,7 @@
         android:layout_below="@+id/tvDescription"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        tools:text="2 likes" />
+        tools:text="10 likes" />
 
     <TextView
         android:id="@+id/tvDate"
@@ -133,8 +129,7 @@
         android:layout_below="@+id/tvLike"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        tools:ignore="RelativeOverlap"
-        tools:text="10/23/1" />
+        tools:ignore="RelativeOverlap"/>
 
     <Space
         android:layout_width="match_parent"

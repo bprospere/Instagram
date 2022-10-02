@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // click to sign up
+
         btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +59,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    // method to singUp
     private void signUpUser(String username, String password) {
         Log.i(TAG, "Attempting to user signIn " + username);
         User user = new User();

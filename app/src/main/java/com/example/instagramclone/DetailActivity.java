@@ -34,9 +34,9 @@ import java.util.List;
 public class DetailActivity extends AppCompatActivity {
 
     public static final String TAG = "DetailActivity";
-    protected ImageView ivProfileImage, ivPost;
-    TextView tvUsername, tvDescription, tvDate, tvLikeDetail;
-    ImageButton imgBtnSettings, imgBtnHeart, imgBtnComment, imgBtnSend, imgBtnSave;
+    protected ImageView ivProfileImage1, ivPost1;
+    TextView tvUserName1, tvDescription1, tvDate1, tvLike;
+    ImageButton ic_more1, ic_heart, ic_chat1, ic_send1, ic_bookmark1;
     RecyclerView rvComment;
     protected List<String> commentsParse;
     protected List<Comment> comments;
@@ -54,17 +54,17 @@ public class DetailActivity extends AppCompatActivity {
 
 
 
-        ivProfileImage = findViewById(R.id.ivProfileImageDetail);
-        ivPost = findViewById(R.id.ivPostDetail);
-        tvUsername = findViewById(R.id.tvUsernameDetail);
-        tvDate = findViewById(R.id.tvDateDetail);
-        tvLikeDetail = findViewById(R.id.tvLikeDetail);
-        tvDescription = findViewById(R.id.tvDescriptionDetail);
-        imgBtnSettings = findViewById(R.id.imgBtnSettingsDetail);
-        imgBtnHeart = findViewById(R.id.imgBtnHeartDetail);
-        imgBtnComment = findViewById(R.id.imgBtnCommentDetail);
-        imgBtnSend = findViewById(R.id.imgBtnSendDetail);
-        imgBtnSave = findViewById(R.id.imgBtnSaveDetail);
+        ivProfileImage1 = findViewById(R.id.ivProfileImage1);
+        ivPost1 = findViewById(R.id.ivPost1);
+        tvUserName1 = findViewById(R.id.tvUserName1);
+        tvDate1 = findViewById(R.id.tvDate1);
+        tvLike = findViewById(R.id.tvLike);
+        tvDescription1 = findViewById(R.id.tvDescription1);
+        ic_more1 = findViewById(R.id.ic_more1);
+        ic_heart = findViewById(R.id.ic_heart);
+        ic_chat1 = findViewById(R.id.ic_chat1);
+        ic_send1 = findViewById(R.id.ic_send1);
+        ic_bookmark1 = findViewById(R.id.ic_bookmark1);
         rvComment = findViewById(R.id.rvComment);
 
         Post post = Parcels.unwrap(getIntent().getParcelableExtra(MainActivity.POST));
@@ -86,7 +86,7 @@ public class DetailActivity extends AppCompatActivity {
         try{
             if (listUserLike.contains(currentUser.getObjectId())) {
                 Drawable drawable = ContextCompat.getDrawable(DetailActivity.this, R.drawable.heartcolor);
-                imgBtnHeart.setImageDrawable(drawable);
+                ic_heart.setImageDrawable(drawable);
             }
         }catch (NullPointerException e){
             e.printStackTrace();
@@ -96,19 +96,19 @@ public class DetailActivity extends AppCompatActivity {
         adapter = new CommentAdapter(context, comments);
         rvComment.setAdapter(adapter);
         rvComment.setLayoutManager(new LinearLayoutManager(context));
-        tvUsername.setText(post.getUser().getUsername());
-        tvDescription.setText(post.getDescription());
-        tvLikeDetail.setText(String.valueOf(post.getNumberLike()) + " likes");
-      tvDate.setText(TimeFormatter.getTimeStamp(post.getCreatedAt().toString()));
-//        Glide.with(DetailActivity.this).load(post.getUser().getParseFile(User.KEY_PROFILE_IMAGE).getUrl()).transform(new RoundedCorners(100)).into(ivProfileImage);
+        tvUserName1.setText(post.getUser().getUsername());
+        tvDescription1.setText(post.getDescription());
+        tvLike.setText(String.valueOf(post.getNumberLike()) + " likes");
+        tvDate1.setText(TimeFormatter.getTimeStamp(post.getCreatedAt().toString()));
+//        Glide.with(DetailActivity.this).load(post.getUser().getParseFile(User.KEY_PROFILE_IMAGE).getUrl()).transform(new RoundedCorners(100)).into(ivProfileImage1);
 
         ParseFile image = post.getImage();
         if(image != null){
-            Glide.with(DetailActivity.this).load(image.getUrl()).transform(new RoundedCorners(30)).into(ivPost);
+            Glide.with(DetailActivity.this).load(image.getUrl()).transform(new RoundedCorners(30)).into(ivPost1);
         }
 
 
-        imgBtnComment.setOnClickListener(new View.OnClickListener() {
+        ic_chat1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailActivity.this, CommentActivity.class);
@@ -117,7 +117,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        imgBtnHeart.setOnClickListener(new View.OnClickListener() {
+        ic_heart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 like = post.getNumberLike();
@@ -125,18 +125,18 @@ public class DetailActivity extends AppCompatActivity {
 
                 if (!listUserLike.contains(currentUser.getObjectId())){
                     Drawable drawable = ContextCompat.getDrawable(DetailActivity.this, R.drawable.heartcolor);
-                    imgBtnHeart.setImageDrawable(drawable);
+                    ic_heart.setImageDrawable(drawable);
                     like++;
                     index = -1;
 
                 }else {
                     Drawable drawable = ContextCompat.getDrawable(DetailActivity.this, R.drawable.ic_heart);
-                    imgBtnHeart.setImageDrawable(drawable);
+                    ic_heart.setImageDrawable(drawable);
                     like--;
                     index = listUserLike.indexOf(currentUser.getObjectId());
                 }
 
-                tvLikeDetail.setText(String.valueOf(like) + " likes");
+                tvLike.setText(String.valueOf(like) + " likes");
                 saveLike(post, like, index, currentUser);
             }
         });

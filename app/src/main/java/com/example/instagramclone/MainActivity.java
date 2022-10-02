@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = ProfiliFragment;
                         break;
                 }
-                fragmentManager.beginTransaction().replace(R.id.fragmentPlaceholder, fragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
                 return true;
             }
         });

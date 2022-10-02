@@ -96,7 +96,7 @@ public class ProfileFragment extends Fragment{
       //     imgUrl =(currentUser.getParseFile(User.KEY_PROFILE_IMAGE)).getUrl();
         }
         tvUsername.setText(userName);
-     //   Glide.with(getContext()).load(imgUrl).transform(new RoundedCorners(100)).into(ivProfile);
+     //   Glide.with(getContext()).load(imgUrl).transform(new RoundedCorners(100)).into(imageProfile);
 
         adapter = new GridAdapter(getContext(), postList);
         gridView.setAdapter(adapter);
@@ -116,12 +116,11 @@ public class ProfileFragment extends Fragment{
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                open();
+                Start();
             }
         });
     }
 
-    // query to get all post of the current user
     protected void queryPost() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
@@ -148,7 +147,7 @@ public class ProfileFragment extends Fragment{
 
 
     // open the dialog (user can take photo or choose one from his gallery)
-    public void open(){
+    public void Start(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setMessage("Edit photo profile");
 

@@ -21,13 +21,13 @@ import com.parse.SaveCallback;
 
 import org.parceler.Parcels;
 
-import java.util.Objects;
+
 
 public class CommentActivity extends AppCompatActivity {
 
     public static final String TAG = "CommentActivity";
     private TextView tvUserName;
-    private ImageView profileImage;
+    private ImageView imageProile2;
     private EditText etComment;
     private Button btnComment;
     Context context;
@@ -37,31 +37,22 @@ public class CommentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
-
         Toolbar toolbar = findViewById(R.id.toolbar_detail);
-        ImageButton ic_camera = findViewById(R.id.ic_camera);
+
         setSupportActionBar(toolbar);
 
 
         tvUserName = findViewById(R.id.tvUserName);
-        profileImage = findViewById(R.id.profileImage);
+        imageProile2 = findViewById(R.id.imageProile2);
         etComment = findViewById(R.id.etComment);
         btnComment = findViewById(R.id.btnComment);
 
         post = Parcels.unwrap(getIntent().getParcelableExtra(MainActivity.POST));
         ParseUser currentUser = ParseUser.getCurrentUser();
         tvUserName.setText(currentUser.getUsername());
-//        Glide.with(CommentActivity.this).load((currentUser.getParseFile(User.KEY_PROFILE_IMAGE)).getUrl()).into(profileImage);
+//        Glide.with(CommentActivity.this).load((currentUser.getParseFile(User.KEY_PROFILE_IMAGE)).getUrl()).into(imageProile2);
 
 
-        ic_camera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(CommentActivity.this, MainActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivityIfNeeded(i, 0);
-            }
-        });
 
         btnComment.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -52,18 +52,12 @@ public class HomeFragment extends Fragment {
         rvRecycle = view.findViewById(R.id.rvRecycle);
         swipeContainer = view.findViewById(R.id.swipeContainer);
         postList = new ArrayList<>();
-
-        //Create the adapter
         adapter = new PostAdapter(getContext(), postList);
-
-        //Set the adapter on the recyclerView
         rvRecycle.setAdapter(adapter);
 
-        // Set The layout manager on the recyclerView
         LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         rvRecycle.setLayoutManager(layoutManager);
 
-        // Configure the refreshing colors
         swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
@@ -86,8 +80,6 @@ public class HomeFragment extends Fragment {
                 loadMoreData();
             }
         };
-
-//      Adds the scroll listener to RecyclerView
         rvRecycle.addOnScrollListener(scrollListener);
 
         queryPost();
@@ -126,12 +118,8 @@ public class HomeFragment extends Fragment {
                     Toast.makeText(getContext(), "Issue with getting Posts", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
-                // CLEAR OUT old items before appending in the new ones
-                adapter.clear();
-                // ...the data has come back, add new items to your adapter...
+               adapter.clear();
                 adapter.addAll(posts);
-                // Now we call setRefreshing(false) to signal refresh has finished
                 swipeContainer.setRefreshing(false);
             }
         });
