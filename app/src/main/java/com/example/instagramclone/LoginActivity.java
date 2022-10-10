@@ -1,5 +1,4 @@
 package com.example.instagramclone;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,14 +32,12 @@ public class LoginActivity extends AppCompatActivity {
             goMainActivity();
         }
 
-        // click to login
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, " login click");
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-
                 loginUser(username, password);
             }
         });
@@ -52,7 +49,6 @@ public class LoginActivity extends AppCompatActivity {
                 Log.i(TAG, " signUp click");
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-
                 signUpUser(username, password);
             }
         });
@@ -62,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
     private void signUpUser(String username, String password) {
         Log.i(TAG, "Attempting to user signIn " + username);
         User user = new User();
-        // Set core properties
         user.setUsername(username);
         user.setPassword(password);
 
@@ -73,14 +68,12 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Issue with signUp", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                // Navigate to the main activity
                 goMainActivity();
             }
         });
 
     }
 
-    // method to login
     private void loginUser(String username, String password) {
         Log.i(TAG, "Attempting to user login " + username);
         ParseUser.logInInBackground(username, password, new LogInCallback() {
@@ -91,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Issue with login", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                // Navigate to the main activity
+
                 goMainActivity();
             }
         });

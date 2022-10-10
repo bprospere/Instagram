@@ -62,8 +62,6 @@ public class HomeFragment extends Fragment {
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
-
-        // Setup refresh listener which triggers new data loading
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -87,7 +85,6 @@ public class HomeFragment extends Fragment {
 
     private void loadMoreData() {
         query = ParseQuery.getQuery(Post.class);
-
         query.include(Post.KEY_USER);
         query.setLimit(20);
 
@@ -118,7 +115,7 @@ public class HomeFragment extends Fragment {
                     Toast.makeText(getContext(), "Issue with getting Posts", Toast.LENGTH_SHORT).show();
                     return;
                 }
-               adapter.clear();
+                adapter.clear();
                 adapter.addAll(posts);
                 swipeContainer.setRefreshing(false);
             }

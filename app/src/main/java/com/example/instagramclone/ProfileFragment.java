@@ -25,6 +25,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -37,6 +39,7 @@ import org.parceler.Parcels;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 public class ProfileFragment extends Fragment{
@@ -89,14 +92,14 @@ public class ProfileFragment extends Fragment{
             currentUser = post.getUser();
             editProfile.setVisibility(View.INVISIBLE);
             btnLogout.setVisibility(View.INVISIBLE);
-            imgUrl = post.getUser().getParseFile(User.KEY_PROFILE_IMAGE).getUrl();
+            imgUrl = (post.getUser().getParseFile(User.KEY_PROFILE_IMAGE)).getUrl();
         }else {
             currentUser = ParseUser.getCurrentUser();
             userName = currentUser.getUsername();
-      //     imgUrl =(currentUser.getParseFile(User.KEY_PROFILE_IMAGE)).getUrl();
+            imgUrl =(currentUser.getParseFile(User.KEY_PROFILE_IMAGE)).getUrl();
         }
         tvUsername.setText(userName);
-     //   Glide.with(getContext()).load(imgUrl).transform(new RoundedCorners(100)).into(imageProfile);
+       Glide.with(getContext()).load(imgUrl).transform(new RoundedCorners(100)).into(imageProfile);
 
         adapter = new GridAdapter(getContext(), postList);
         gridView.setAdapter(adapter);

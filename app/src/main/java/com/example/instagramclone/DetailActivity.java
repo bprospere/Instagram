@@ -1,5 +1,6 @@
 package com.example.instagramclone;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -14,17 +15,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-
 import org.json.JSONException;
 import org.parceler.Parcels;
 
@@ -45,6 +43,7 @@ public class DetailActivity extends AppCompatActivity {
     public static int like;
     public static ArrayList<String> listUserLike;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,7 +99,7 @@ public class DetailActivity extends AppCompatActivity {
         tvDescription1.setText(post.getDescription());
         tvLike.setText(String.valueOf(post.getNumberLike()) + " likes");
         tvDate1.setText(TimeFormatter.getTimeStamp(post.getCreatedAt().toString()));
-//        Glide.with(DetailActivity.this).load(post.getUser().getParseFile(User.KEY_PROFILE_IMAGE).getUrl()).transform(new RoundedCorners(100)).into(ivProfileImage1);
+        Glide.with(DetailActivity.this).load(post.getUser().getParseFile(User.KEY_PROFILE_IMAGE).getUrl()).transform(new RoundedCorners(100)).into(ivProfileImage1);
 
         ParseFile image = post.getImage();
         if(image != null){

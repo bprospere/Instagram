@@ -1,5 +1,4 @@
 package com.example.instagramclone;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -20,6 +19,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
@@ -28,7 +28,7 @@ import org.json.JSONException;
 import org.parceler.Parcels;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Objects;
 
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
@@ -63,6 +63,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
     @Override
     public int getItemCount() {
         return posts.size();
+
     }
 
 
@@ -107,12 +108,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
             ParseUser currentUser = ParseUser.getCurrentUser();
             listLikes = Post.fromJsonArray(post.getListLike());
 
+                Glide.with(context).load(post.getUser().getParseFile(User.KEY_PROFILE_IMAGE).getUrl()).transform(new RoundedCorners(100)).into(imageProfile1);
 
-
-          //    Glide.with(context).load((post.getUser().getParseFile(User.KEY_PROFILE_IMAGE)).getUrl()).transform(new RoundedCorners(100)).into(imageProfile1);
-
-               tvUsername.setText(post.getUser().getUsername());
-                tvDescription.setText(post.getDescription());
+            tvUsername.setText(post.getUser().getUsername());
+            tvDescription.setText(post.getDescription());
             tvDate.setText(TimeFormatter.getTimeStamp(post.getCreatedAt().toString()));
 
 
@@ -172,13 +171,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
                 public void onClick(View view) {
                     FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
 
-                    // set parameters
-                    ProfileFragment profileFragment = ProfileFragment.newInstance("Some Title");
+
+                    ProfileFragment profileFragment = ProfileFragment.newInstance("");
                     Bundle bundle = new Bundle();
                     bundle.putParcelable(MainActivity.POST, Parcels.wrap(post));
                     profileFragment.setArguments(bundle);
 
-                    fragmentManager.beginTransaction().replace(R.id.fragmentPlaceholder, profileFragment).commit();
+                    fragmentManager.beginTransaction().replace(R.id.frame, profileFragment).commit();
                 }
             });
 

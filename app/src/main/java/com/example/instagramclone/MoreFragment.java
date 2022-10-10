@@ -1,5 +1,4 @@
 package com.example.instagramclone;
-
 import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
 import androidx.annotation.Nullable;
@@ -67,7 +66,6 @@ public class MoreFragment extends Fragment {
             }
         });
 
-
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,14 +95,12 @@ public class MoreFragment extends Fragment {
                 etDescription.setVisibility(View.VISIBLE);
                 ivPicture.setVisibility(View.VISIBLE);
                 ivPicture.setImageBitmap(takenImage);
-            } else { // Result was a failure
+            } else {
                 Toast.makeText(getContext(), "Error taking picture", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-
-    // method to launch the camera
     private void launchCamera() {
         // create Intent to take a picture and return control to the calling application
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -137,13 +133,10 @@ public class MoreFragment extends Fragment {
             Log.d(TAG, "failed to create directory");
         }
 
-        // Return the file target for the photo based on filename
         return new File(mediaStorageDir.getPath() + File.separator + fileName);
     }
-
-    // method to save a post
     private void SavePost(String description, ParseUser currentUser, File photoFile) {
-        progressBar.setVisibility(ProgressBar.VISIBLE); // show the progressBar
+        progressBar.setVisibility(ProgressBar.VISIBLE);
         Post post = new Post();
         post.setDescription(description);
         post.setImage(new ParseFile(photoFile));
@@ -155,12 +148,12 @@ public class MoreFragment extends Fragment {
                 if (e != null){
                     Log.e(TAG, "Error while saving", e);
                     Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(ProgressBar.INVISIBLE); // hide the progressBar
+                    progressBar.setVisibility(ProgressBar.INVISIBLE);
                     return;
                 }
                 if (photoFile == null || ivPicture.getDrawable() == null){
                     Toast.makeText(getContext(), "There is no image", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(ProgressBar.INVISIBLE); // hide the progressBar
+                    progressBar.setVisibility(ProgressBar.INVISIBLE);
                     return;
                 }
                 Toast.makeText(getContext(), "Post save as successful!!", Toast.LENGTH_SHORT).show();

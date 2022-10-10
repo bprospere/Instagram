@@ -1,6 +1,4 @@
 package com.example.instagramclone;
-
-
 import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseObject;

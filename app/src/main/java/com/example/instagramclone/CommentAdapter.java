@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import org.json.JSONException;
 
@@ -60,7 +62,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
         public void bind(Comment comment, ViewHolder holder) throws JSONException {
             tvUsername.setText(comment.getUser().getUsername());
             tvComment.setText(comment.getComment());
-        //   Glide.with(holder.itemView.getContext()).load((comment.getUser().getParseFile(User.KEY_PROFILE_IMAGE)).getUrl()).transform(new RoundedCorners(100)).into(ivProfileImage);
+           Glide.with(holder.itemView.getContext()).load((comment.getUser().getParseFile(User.KEY_PROFILE_IMAGE)).getUrl()).transform(new RoundedCorners(100)).into(ivProfileImage);
         }
     }
 }

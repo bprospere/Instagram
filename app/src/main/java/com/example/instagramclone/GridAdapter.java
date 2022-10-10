@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.parse.ParseFile;
 import java.util.List;
 
@@ -49,7 +52,7 @@ public class GridAdapter extends BaseAdapter {
 
         ImageView ivPostImage = view.findViewById(R.id.ivPostImage);
         ParseFile image = posts.get(i);
-       // Glide.with(context).load(image.getUrl()).transform(new RoundedCorners(100)).into(ivPostImage);
+        Glide.with(context).load(image.getUrl()).transform(new RoundedCorners(100)).into(ivPostImage);
 
         return view;
     }
