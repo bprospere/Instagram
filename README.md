@@ -1,3 +1,4 @@
+![videoInstagram (1)](https://user-images.githubusercontent.com/93800102/202822191-bfa86e6b-f50c-453a-9938-f5f08886e230.gif)
 # Project 3 - *Name of App Here*
 
 **Name of your app** is a photo sharing app similar to Instagram but using Parse as its backend.
