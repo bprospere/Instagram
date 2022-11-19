@@ -35,7 +35,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='videoInstagram2(2)' />
+
+<img src="videoInstagram2(2)" width=250><br>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -97,7 +98,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='videoInstagram(1)'/>
+
+<img src="VideoInstagram" width=250><br>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
